@@ -1,0 +1,182 @@
+﻿/* ======================
+   NAVBAR
+====================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #89aaf1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: white;
+  z-index: 1000;
+}
+
+/* ======================
+   MENU BUTTON (below navbar)
+====================== */
+.menu-btn {
+  position: fixed;
+  top: 90px; /* appears below navbar */
+  left: 20px;
+  background-color: #88bee5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 900;
+  transition: background-color 0.2s;
+}
+
+.menu-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* ======================
+   SIDEBAR
+====================== */
+.sidebar {
+  position: fixed;
+  top: 80px; /* starts below navbar */
+  left: -250px;
+  width: 250px;
+  height: calc(100vh - 80px);
+  background-color: #f1f5f9;
+  color: #499df1;
+  transition: left 0.3s ease;
+  z-index: 800;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.sidebar-buttons button:hover {
+  background-color: rgb(142, 21, 199); /* darker blue */
+  transform: translateX(5px); /* subtle slide effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* subtle shadow */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* Close button inside sidebar */
+.close-btn {
+  background: transparent;
+  border: none;
+  color: rgb(37, 170, 121);
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+/* Sidebar buttons */
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.sidebar-buttons button {
+  background-color: #2b3131;
+  color: rgb(71, 123, 212);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s, transform 0.2s;
+  text-align: left;
+}
+
+.sidebar-buttons button {
+  background-color: #688feb; /* buttons can stay colored for contrast */
+  color: white;
+}
+.sidebar-buttons button:hover svg {
+  color: rgb(207, 38, 38); /* example: soft yellow */
+}
+
+.close-btn {
+  color: #111827; /* dark close button icon */
+}
+
+/* ======================
+   PAGE & CONTENT STYLES
+====================== */
+.page-container {
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.back-btn {
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.main-dashboard {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* ============ DASHBOARD ICONS (BIG, GRID STYLE) ============ */
+.dashboard-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  width: 80vw;
+  height: 60vh;
+  margin: 60px auto 0 auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.dashboard-icons div {
+  background: white;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 240px;
+  border-radius: 16px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 32px;
+  transition: all 0.3s;
+}
+
+.dashboard-icons div span {
+  margin-top: 18px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.dashboard-icons div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* ======================
+   GENERAL
+====================== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f9fafb;
+}
