@@ -49,10 +49,12 @@ npm install
 
 Configure environment variables
 Create .env file inside /backend:
-
-MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/
+MONGODB_URI=mongodb+srv://samudralasripada_db_user:Sripada_23@cluster0.jtnmaop.mongodb.net/?appName=Cluster0
+MONGO_DB_NAME=patient_outcome_prediction
 PORT=4000
-MODEL_API_URL=https://your-ngrok-url.ngrok-free.app
+COLAB_MODEL_URL=https://your-ngrok-url.ngrok-free.dev
+
+
 
 
 Run backend server
